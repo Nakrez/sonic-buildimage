@@ -382,8 +382,6 @@ set /files/etc/ssh/sshd_config/#comment[following-sibling::*[1][self::ClientAliv
 save
 quit
 EOF
-# Configure sshd to listen for v4 connections; disable listening for v6 connections
-sudo sed -i 's/^ListenAddress ::/#ListenAddress ::/' $FILESYSTEM_ROOT/etc/ssh/sshd_config
 sudo sed -i 's/^#ListenAddress 0.0.0.0/ListenAddress 0.0.0.0/' $FILESYSTEM_ROOT/etc/ssh/sshd_config
 
 ## Config rsyslog
